@@ -22,15 +22,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.12674272" />
-    <property name="project.structure.side.proportion" value="0.2" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -60,11 +55,24 @@
       <workItem from="1605074157643" duration="623000" />
       <workItem from="1605430368308" duration="388000" />
       <workItem from="1618129491211" duration="52000" />
-      <workItem from="1623117749432" duration="881000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="998" y="224" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602052931230">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="998" y="224" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1602052931230" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1601879941970">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1601879941970" />
+    <state x="491" y="330" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1602051668976">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="491" y="330" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1536.824@0.0.1536.824" timestamp="1602051668976" />
   </component>
 </project>

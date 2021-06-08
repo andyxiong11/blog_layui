@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0"><!--让当前viewport的宽度等于移动端设备的宽度-->
+    <title>博客详情</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="./static/css/custom.css">
+</head>
+<body>
+
+<!--导航-->
+<nav class="ui inverted attached segment custom-padding-tb-mini "><!--inverted 反色;attached 去圆角；上下宽度减小-->
+    <div class="ui container"><!--container 响应式容器-->
+        <div class="ui inverted secondary stackable menu"><!--menu 导航栏内部;secondary 鼠标移上去高亮;stackable 移动端可堆叠-->
+            <h2 class="ui teal herder item" style="color: teal">Blog</h2><!--ui herder中间加颜色失效;item代表menu里每个条目-->
+            <a href="#" class="menu-item item custom-mobile-hide"><i class="mini home icon"></i>首页</a>
+            <!--custom-mobile-hide手机端自动隐藏-->
+            <a href="#" class="menu-item item custom-mobile-hide"><i class="mini idea icon"></i>分类</a>
+            <!--menu-item用于jquery获取-->
+            <a href="#" class="menu-item item custom-mobile-hide"><i class="mini tags icon"></i>标签</a>
+            <a href="#" class="menu-item item custom-mobile-hide"><i class="mini clone icon"></i>归档</a>
+            <a href="#" class="menu-item item custom-mobile-hide"><i class="mini info icon"></i>关于我</a>
+            <!--搜索框-->
+            <div class="right menu-item item custom-mobile-hide">
+                <div class="ui inverted icon transparent input"><!--icon 引入图标;transparent 透明-->
+                    <input type="text" placeholder="请输入搜索内容">
+                    <i class="search link icon"></i><!--link 超链接-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--移动端导航栏隐藏菜单-->
+    <a href="#" class="ui menu toggle black icon button custom-top-right custom-mobile-show">
+        <!--menu toggle用于jquery获取;custom-mobile-show桌面隐藏菜单按钮-->
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+
+<!--中间内容-->
+<div class="custom-container-small custom-padding-td-big">
+    <div class="ui container">
+        <div class="ui top attached segment"><!--top与底部botton呼应，变圆角 attached 浮动叠加-->
+            <div class="ui horizontal link list"><!--horizontal 让link lst组件横向布局-->
+                <div class="item">
+                    <img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image"><!--avatre 圆形小图-->
+                    <div class="content"><a href="#" class="header">AndyXiong</a></div>
+                </div>
+                <div class="item">
+                    <i class="calendar icon"></i>2020-10-5
+                </div>
+                <div class="item">
+                    <i class="eye icon"></i>2342
+                </div>
+            </div>
+        </div>
+
+        <!--图片区-->
+        <div class="ui attached segment">
+            <img src="https://unsplash.it/800/450?image=1005"
+                 alt="" class="ui fluid rounded image"><!--rounded 圆角-->
+        </div>
+
+        <!--博客内容-->
+        <div class="ui attached padded segment">
+            <div class="ui right aligned basic segment"><!--basic 反色 label 按钮-->
+                <div class="ui orange basic label">原创</div>
+            </div>
+            <h2 class="ui center aligned header">《刻意练习》带给我们的五点启示</h2>
+            <br>
+            <div class="custom-padding-lr-responsive custom-padding-td-large"><!--responsive 移动端自动变成lr0-->
+                <p>
+                    第一、看到别人的非同凡响，不要感觉望尘莫及。即便没有他的天赋和运气，我们依然可以通过努力成为一个高手，就连掌管我们一切的大脑，他的生理构造都可以被我们后天的努力所重塑，我们还有什么理由不去接受蜕变的。<br>
+                    第二、不论在什么行业，不论你做什么事情？成为高手的路径一定是刻意练习。<br>
+                    第三、关于刻意练习最大的误会，叫做1万小时定律，我们把自己变成高手的关键不是练习的时间，而是练习的方法。<br>
+                    第四、刻意练习必须脱离舒适区，漫长的痛苦一定在这里，如影随形。也正是因为如此，成长，它就是一件自虐的事情，它是一条孤独的路。<br>
+                    第五、我们的意志力比我们自己想象的还要脆弱。我们需要寻求外部的支持，甚至是胁迫，唯有建立的自己的正向反馈系统，你才能够变得像表面上看上去的那么强大！
+                </p>
+            </div>
+
+            <!--标签-->
+            <div class="custom-padding-lr">
+                <div class="ui basic teal left pointing label">方法</div>
+            </div>
+
+            <!--赞赏失败-->
+            <div class="ui center aligned basic  segment">
+                <button id="payButton" class="ui orange  basic circular button">赞赏</button>
+                <!--payButton 用于jQuery引用;circular 半圆角-->
+            </div>
+            <div class="ui payQR flowing popup transition hidden"><!--payQR 用于jQuery引用;flowing popup 自带样式 弹出-->
+                <div class="ui orange basic label">
+                    <div class="ui images" style="font-size: inherit !important;"><!--inherit 继承上一级-->
+                        <div class="images">
+                            <img src="./static/img/wechat.jpg" alt="" class="ui rounded bordered image"
+                                 style="width: 120px;">
+                        </div>
+                        <div>支付宝</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--博客信息-->
+        <div class="ui attached positive message"><!--positive 自带css背景色-->
+            <div class="ui middle aligned grid"><!--middle aligned 垂直居中-->
+                <div class="eleven wide column">
+                    <div class="ui list">
+                        <li>作者</li>
+                        <li>发表时间</li>
+                        <li>版权声明</li>
+                        <li>公众号转载</li>
+                    </div>
+                </div>
+                <div class="five wide column">
+                    <img src="./static/img/wechat.jpg" alt="" class="ui right floated rounded bordered images"
+                         style="width: 110px;"><!--right floated 向右浮动-->
+                </div>
+            </div>
+        </div>
+
+        <!--留言区-->
+        <div class="ui bottom attached segment">
+
+            <!--留言区列表-->
+            <div class="ui teal segment">
+                <div class="ui comments">
+                    <h3 class="ui dividing header">Comments</h3>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="https://unsplash.it/100/100?image=1005">
+                        </a>
+                        <div class="content">
+                            <a class="author">Matt</a>
+                            <div class="metadata">
+                                <span class="date">今天下午 5:42</span>
+                            </div>
+                            <div class="text">太赞了！</div>
+                            <div class="actions">
+                                <a class="reply">Reply</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="https://unsplash.it/100/100?image=1005">
+                        </a>
+                        <div class="content">
+                            <a class="author">Elliot Fu</a>
+                            <div class="metadata">
+                                <span class="date">昨天上午12:30</span>
+                            </div>
+                            <div class="text">
+                                <p>這對我的研究是非常有用.謝謝!</p>
+                            </div>
+                            <div class="actions">
+                                <a class="reply">Reply</a>
+                            </div>
+                        </div>
+                        <div class="comments">
+                            <div class="comment">
+                                <a class="avatar">
+                                    <img src="https://unsplash.it/100/100?image=1005">
+                                </a>
+                                <div class="content">
+                                    <a class="author">Jenny Hess</a>
+                                    <div class="metadata">
+                                        <span class="date">刚刚</span>
+                                    </div>
+                                    <div class="text">艾略特你永远是多么正确 :)</div>
+                                    <div class="actions">
+                                        <a class="reply">Reply</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="https://unsplash.it/100/100?image=1005 ">
+                        </a>
+                        <div class="content">
+                            <a class="author">Joe Henderson</a>
+                            <div class="metadata">
+                                <span class="date">5 天以前</span>
+                            </div>
+                            <div class="text">老兄，这太棒了。非常感谢。</div>
+                            <div class="actions">
+                                <a class="reply">Reply</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--提交留言区-->
+            <div class="ui form">
+                <div class="field">
+                    <textarea name="content" placeholder="请输入评论......"></textarea><!--多行文本输入框-->
+                </div>
+                <div class="fields ">
+                    <div class="field custom-mobile-wide custom-margin-bottom-small"><!--移动端宽度撑满，上下输入框距离-->
+                        <div class="ui left icon input">
+                            <i class="user icon"></i>
+                            <input type="text" name="nickname" placeholder="姓名">
+                        </div>
+                    </div>
+                    <div class="field custom-mobile-wide custom-margin-bottom-small">
+                        <div class="ui left icon input">
+                            <i class="mail icon"></i>
+                            <input type="text" name="email" placeholder="邮箱">
+                        </div>
+                    </div>
+                    <div class="field custom-mobile-wide custom-margin-bottom-small">
+                        <button class="ui teal button custom-mobile-wide"><i class="edit icon"></i>发布</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </attached>
+    </div>
+</div>
+
+<br>
+<br>
+<!--底部footer-->
+<footer class="ui inverted vertical segment custom-padding-td-massive"><!--vertical 去圆角，垂直；上下宽度增大-->
+    <div class="ui center aligned container"><!--center aligned 居中;container 响应式容器-->
+        <div class="ui inverted divided stackable grid"><!--grid 分16份;stackable 移动端可堆叠-->
+            <div class="three wide column"><!--wide 填满 column一列-->
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <img src="./static/img/wechat.jpg" class="ui rounded images" alt="" style="width: 110px">
+                        <!--rounded 圆角-->
+                    </div>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header custom-text-thin custom-text-spaced ">最新博客</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">用户故事</a>
+                    <a href="#" class="item">用户故事</a>
+                    <a href="#" class="item">用户故事</a>
+                    <a href="#" class="item">用户故事</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header custom-text-thin custom-text-spaced ">联系我</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">Email:xiognyexingxyx@163.com</a>
+                    <a href="#" class="item">QQ：1425362530</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui inverted header custom-text-thin custom-text-spaced ">ChrisFSRM</h4>
+                <div class="ui inverted link list">
+                    <P class="custom-text-thin custom-text-spaced custom-opacity-mini">这是我的个人博客</P>
+                </div>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div><!--divider 分割线-->
+        <p class="custom-text-thin custom-text-spaced custom-opacity-tiny">Copyright ® 2020-2021 ChrisFSRM Designed by
+            AndyXiong</p>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script>
+    $('.menu.toggle').click(function () {/*click方法,点击时显示隐藏元素*/
+        $('.menu-item').toggleClass('custom-mobile-hide');/*toggleClass jquery自带样式，点击打开或关闭*/
+    });
+    $('#payButton').popup({/*popup 自带css 弹出*/
+        popup: $('.payQR.popup'),
+        on: 'click',/*点击弹出*/
+        position: 'bottom center'/*从中间弹出*/
+    });
+</script>
+</body>
+</html>

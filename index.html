@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0"><!--让当前viewport的宽度等于移动端设备的宽度-->
+    <title>首页</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="./static/css/custom.css">
+</head>
+<body>
+
+    <!--导航-->
+    <nav class="ui inverted attached segment custom-padding-tb-mini "><!--inverted 反色;attached 去圆角、浮动；上下宽度减小-->
+        <div class="ui container"><!--container 响应式容器-->
+            <div class="ui inverted secondary stackable menu"><!--menu 导航栏内部;secondary 鼠标移上去高亮;stackable 移动端可堆叠-->
+                <h2 class="ui  herder item" style="color: teal">Blog</h2><!--ui herder中间加颜色失效;item代表menu里每个条目-->
+                <a href="#" class="menu-item item custom-mobile-hide"><i class="mini home icon"></i>首页</a><!--custom-mobile-hide手机端自动隐藏-->
+                <a href="#" class="menu-item item custom-mobile-hide"><i class="mini idea icon"></i>分类</a><!--menu-item用于jquery获取-->
+                <a href="#" class="menu-item item custom-mobile-hide"><i class="mini tags icon"></i>标签</a>
+                <a href="#" class="menu-item item custom-mobile-hide"><i class="mini clone icon"></i>归档</a>
+                <a href="#" class="menu-item item custom-mobile-hide"><i class="mini info icon"></i>关于我</a>
+                <!--搜索框-->
+                <div class="right menu-item item custom-mobile-hide">
+                    <div class="ui inverted icon transparent input"><!--icon 引入图标;transparent 透明-->
+                        <input type="text" placeholder="请输入搜索内容">
+                        <i class="search link icon"></i><!--link 超链接-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--移动端导航栏隐藏菜单-->
+        <a href="#" class="ui menu toggle black icon button custom-top-right custom-mobile-show"><!--menu toggle用于jquery获取;custom-mobile-show桌面隐藏菜单按钮-->
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+
+    <!--中间内容-->
+    <div class="custom-container custom-padding-td-big">
+        <div class="ui container"><!--container 响应式容器-->
+            <div class="ui stackable grid"><!--grid 分16份-->
+
+                <!--左边博客列表-->
+                <div class="eleven wide column"><!--wide 填满 column一列-->
+
+                    <!--header-->
+                    <div class="ui attached segment"><!--attached 浮动-->
+                        <div class="ui middle aligned two column grid"><!--middle aligned垂直居中-->
+                            <div class="column">
+                                <h3 class="ui teal header">博客</h3>
+                            </div>
+                            <div class="right aligned column">
+                                共 <h2 class="ui orange header custom-inline-block custom-text-thin">31</h2> 篇<!--custom-inline-block 转换成行内元素-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--content-->
+                    <div class="ui attached segment custom-padding-td-big"><!--attached 浮动-->
+                        <div class="ui padded vertical segment"><!--padded 增加内部边距;vertical 四周无缝隙-->
+                            <div class="ui mobile reversed stackable grid"><!--mobile reversed 移动端文章图片互换位置；stackable 移动端可堆叠-->
+                                <div class="eleven wide column">
+                                    <h3 class="ui header">《刻意练习》带给我们的五点启示</h3>
+                                    <p class="custom-text">
+                                        第一、看到别人的非同凡响，不要感觉望尘莫及。即便没有他的天赋和运气，我们依然可以通过努力成为一个高手，就连掌管我们一切的大脑，他的生理构造都可以被我们后天的努力所重塑，我们还有什么理由不去接受蜕变的。<br>
+                                        第二、不论在什么行业，不论你做什么事情？成为高手的路径一定是刻意练习。<br>
+                                        第三、关于刻意练习最大的误会，叫做1万小时定律，我们把自己变成高手的关键不是练习的时间，而是练习的方法。<br>
+                                        第四、刻意练习必须脱离舒适区，漫长的痛苦一定在这里，如影随形。也正是因为如此，成长，它就是一件自虐的事情，它是一条孤独的路。<br>
+                                        第五、我们的意志力比我们自己想象的还要脆弱。我们需要寻求外部的支持，甚至是胁迫，唯有建立的自己的正向反馈系统，你才能够变得像表面上看上去的那么强大！</p>
+                                    <div class="ui grid">
+                                        <div class="eleven wide column">
+                                            <div class="ui mini horizontal link list"><!--horizontal 让link lst组件横向布局-->
+                                                <div class="item">
+                                                    <img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image"><!--avatre 圆形小图-->
+                                                    <div class="content"><a href="#" class="header">AndyXiong</a></div>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="calendar icon"></i>2020-10-5
+                                                </div>
+                                                <div class="item">
+                                                    <i class="eye icon"></i>2342
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="right aligned five wide column">
+                                            <a href="#" target="_blank" class="ui teal basic label custom-padding-tiny custom-text-thin">认知升级</a><!--_blank 新打开一个页面;basic 按钮中间透明-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="five wide column">
+                                    <a href="#" target="_blank"><!--_blank 新打开一个页面-->
+                                        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601892571217&di=4c2256de40eacbe20f07d6fd830e8ec8&imgtype=0&src=http%3A%2F%2Fa1.att.hudong.com%2F24%2F78%2F20300000291746133783784887147.jpg" alt="" class="ui rounded image"> <!--rounded 圆角;800*450px-->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui attached segment custom-padding-td-big"><!--attached 浮动-->
+                        <div class="ui padded vertical segment"><!--padded 增加内部边距;vertical 四周无缝隙-->
+                            <div class="ui mobile reversed stackable grid"><!--mobile reversed 移动端文章图片互换位置；stackable 移动端可堆叠-->
+                                <div class="eleven wide column">
+                                    <h3 class="ui header">《刻意练习》带给我们的五点启示</h3>
+                                    <p class="custom-text">
+                                        第一、看到别人的非同凡响，不要感觉望尘莫及。即便没有他的天赋和运气，我们依然可以通过努力成为一个高手，就连掌管我们一切的大脑，他的生理构造都可以被我们后天的努力所重塑，我们还有什么理由不去接受蜕变的。<br>
+                                        第二、不论在什么行业，不论你做什么事情？成为高手的路径一定是刻意练习。<br>
+                                        第三、关于刻意练习最大的误会，叫做1万小时定律，我们把自己变成高手的关键不是练习的时间，而是练习的方法。<br>
+                                        第四、刻意练习必须脱离舒适区，漫长的痛苦一定在这里，如影随形。也正是因为如此，成长，它就是一件自虐的事情，它是一条孤独的路。<br>
+                                        第五、我们的意志力比我们自己想象的还要脆弱。我们需要寻求外部的支持，甚至是胁迫，唯有建立的自己的正向反馈系统，你才能够变得像表面上看上去的那么强大！</p>
+                                    <div class="ui grid">
+                                        <div class="eleven wide column">
+                                            <div class="ui mini horizontal link list"><!--horizontal 让link lst组件横向布局-->
+                                                <div class="item">
+                                                    <img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image"><!--avatre 圆形小图-->
+                                                    <div class="content"><a href="#" class="header">AndyXiong</a></div>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="calendar icon"></i>2020-10-5
+                                                </div>
+                                                <div class="item">
+                                                    <i class="eye icon"></i>2342
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="right aligned five wide column">
+                                            <a href="#" target="_blank" class="ui teal basic label custom-padding-tiny custom-text-thin">认知升级</a><!--_blank 新打开一个页面;basic 按钮中间透明-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="five wide column">
+                                    <a href="#" target="_blank"><!--_blank 新打开一个页面-->
+                                        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601892571217&di=4c2256de40eacbe20f07d6fd830e8ec8&imgtype=0&src=http%3A%2F%2Fa1.att.hudong.com%2F24%2F78%2F20300000291746133783784887147.jpg" alt="" class="ui rounded image"> <!--rounded 圆角;800*450px-->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui attached segment custom-padding-td-big"><!--attached 浮动-->
+                        <div class="ui padded vertical segment"><!--padded 增加内部边距;vertical 四周无缝隙-->
+                            <div class="ui mobile reversed stackable grid"><!--mobile reversed 移动端文章图片互换位置；stackable 移动端可堆叠-->
+                                <div class="eleven wide column">
+                                    <h3 class="ui header">《刻意练习》带给我们的五点启示</h3>
+                                    <p class="custom-text">
+                                        第一、看到别人的非同凡响，不要感觉望尘莫及。即便没有他的天赋和运气，我们依然可以通过努力成为一个高手，就连掌管我们一切的大脑，他的生理构造都可以被我们后天的努力所重塑，我们还有什么理由不去接受蜕变的。<br>
+                                        第二、不论在什么行业，不论你做什么事情？成为高手的路径一定是刻意练习。<br>
+                                        第三、关于刻意练习最大的误会，叫做1万小时定律，我们把自己变成高手的关键不是练习的时间，而是练习的方法。<br>
+                                        第四、刻意练习必须脱离舒适区，漫长的痛苦一定在这里，如影随形。也正是因为如此，成长，它就是一件自虐的事情，它是一条孤独的路。<br>
+                                        第五、我们的意志力比我们自己想象的还要脆弱。我们需要寻求外部的支持，甚至是胁迫，唯有建立的自己的正向反馈系统，你才能够变得像表面上看上去的那么强大！</p>
+                                    <div class="ui grid">
+                                        <div class="eleven wide column">
+                                            <div class="ui mini horizontal link list"><!--horizontal 让link lst组件横向布局-->
+                                                <div class="item">
+                                                    <img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image"><!--avatre 圆形小图-->
+                                                    <div class="content"><a href="#" class="header">AndyXiong</a></div>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="calendar icon"></i>2020-10-5
+                                                </div>
+                                                <div class="item">
+                                                    <i class="eye icon"></i>2342
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="right aligned five wide column">
+                                            <a href="#" target="_blank" class="ui teal basic label custom-padding-tiny custom-text-thin">认知升级</a><!--_blank 新打开一个页面;basic 按钮中间透明-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="five wide column">
+                                    <a href="#" target="_blank"><!--_blank 新打开一个页面-->
+                                        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601892571217&di=4c2256de40eacbe20f07d6fd830e8ec8&imgtype=0&src=http%3A%2F%2Fa1.att.hudong.com%2F24%2F78%2F20300000291746133783784887147.jpg" alt="" class="ui rounded image"> <!--rounded 圆角;800*450px-->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--bottom-->
+                    <div class="ui bottom attached segment">
+                        <div class="ui middle aligned two column grid"><!--middle aligned垂直居中-->
+                            <div class="column">
+                                <a href="#" class="ui mini teal basic button">上一页</a><!--basic 按钮中间透明-->
+                            </div>
+                            <div class="right aligned column">
+                                <a href="#" class="ui mini teal basic button">下一页</a><!--basic 按钮中间透明-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--右边的top-->
+                <div class="five wide column">
+
+                    <!--分类-->
+                    <div class="ui segments"><!--segments 多个segment-->
+                        <div class="ui secondary segment"><!--secondary 灰色-->
+                            <div class="ui two column gride">
+                                <div class="column" >
+                                    <i class="idea icon"></i>分类
+                                </div>
+                                <div class="right aligned column custom-top-right" >
+                                    <a href="#">more<i class="angle double right icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui teal segment">
+                            <div class="ui fluid vertical menu"><!--vertical 竖着的菜单;fluid 填充满右部空间-->
+                                <a href="#" class="item">
+                                    学习日志
+                                    <span class="ui teal basic left pointing label">13</span>
+                                </a>
+                                <a href="#" class="item">
+                                    思考与感悟
+                                    <span class="ui teal basic left pointing label">13</span>
+                                </a>
+                                <a href="#" class="item">
+                                    清单
+                                    <span class="ui teal basic left pointing label">13</span>
+                                </a>
+                                <a href="#" class="item">
+                                    JavaScript
+                                    <span class="ui teal basic left pointing label">13</span>
+                                </a><a href="#" class="item">
+                                    创业
+                                    <span class="ui teal basic left pointing label">13</span>
+                                </a>
+                                <a href="#" class="item">
+                                    认知升级
+                                    <span class="ui teal basic left pointing label">13</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--标签-->
+                    <div class="ui segments custom-margin-large"><!--segments 多个segment-->
+                        <div class="ui secondary segment"><!--secondary 灰色-->
+                            <div class="ui two column gride">
+                                <div class="column ">
+                                    <i class="tags icon"></i>标签
+                                </div>
+                                <div class="right aligned column custom-top-right">
+                                    <a href="#">more<i class="angle double right icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui teal segment">
+                            <a href="#" target="_blank" class="ui teal basic left pointing label custom-margin-tb-tiny">
+                                方法论 <span class="detail">23</span>
+                            </a>
+                            <a href="#" target="_blank" class="ui teal basic left pointing label custom-margin-tb-tiny">
+                                方 <span class="detail">23</span>
+                            </a>
+                            <a href="#" target="_blank" class="ui teal basic left pointing label custom-margin-tb-tiny">
+                                方 <span class="detail">23</span>
+                            </a>
+                            <a href="#" target="_blank" class="ui teal basic left pointing label custom-margin-tb-tiny">
+                                方法论 <span class="detail">23</span>
+                            </a>
+                            <a href="#" target="_blank" class="ui teal basic left pointing label custom-margin-tb-tiny">
+                                方法论 <span class="detail">23</span>
+                            </a>
+                            <a href="#" target="_blank" class="ui teal basic left pointing label custom-margin-tb-tiny">
+                                方法论 <span class="detail">23</span>
+                            </a>
+                            <a href="#" target="_blank" class="ui teal basic left pointing label custom-margin-tb-tiny">
+                                方法论 <span class="detail">23</span>
+                            </a>
+                            <a href="#" target="_blank" class="ui teal basic left pointing label custom-margin-tb-tiny">
+                                方法论 <span class="detail">23</span>
+                            </a>
+                            <a href="#" target="_blank" class="ui teal basic left pointing label custom-margin-tb-tiny">
+                                方法论 <span class="detail">23</span>
+                            </a>
+                            <a href="#" target="_blank" class="ui teal basic left pointing label custom-margin-tb-tiny">
+                                方法论 <span class="detail">23</span>
+                            </a>
+                            <a href="#" target="_blank" class="ui teal basic left pointing label custom-margin-tb-tiny">
+                                方法论 <span class="detail">23</span>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <!--最新推荐-->
+                    <div class="ui segments custom-margin-large"><!--segments 多个segment-->
+                        <div class="ui secondary segment"><!--secondary 灰色-->
+                            <i class="bookmark icon"></i>最新推荐
+                        </div>
+                        <div class="ui segment ">
+                            <a href="#" target="_blank" class="custom-black custom-text-thin">用户故事</a>
+                        </div>
+                        <div class="ui segment ">
+                            <a href="#" target="_blank" class="custom-black custom-text-thin">用户故事</a>
+                        </div>
+                        <div class="ui segment ">
+                            <a href="#" target="_blank" class="custom-black custom-text-thin">用户故事</a>
+                        </div>
+                        <div class="ui segment ">
+                            <a href="#" target="_blank" class="custom-black custom-text-thin">用户故事</a>
+                        </div>
+                        <div class="ui segment ">
+                            <a href="#" target="_blank" class="custom-black custom-text-thin">用户故事</a>
+                        </div>
+                        <div class="ui segment ">
+                            <a href="#" target="_blank" class="custom-black custom-text-thin">用户故事</a>
+                        </div>
+                    </div>
+
+                    <!--二维码-->
+                    <h4 class="ui horizontal divider header large">扫码关注我</h4><!--分割线-->
+                    <div class="ui centered card " style="width: 11em">
+                        <img src="./static/img/wechat.jpg" alt="" class="ui round image" ><!--round 圆角-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <!--底部footer-->
+    <footer class="ui inverted vertical segment custom-padding-td-massive"><!--vertical 去圆角，垂直；上下宽度增大-->
+        <div class="ui center aligned container"><!--center aligned 居中;container 响应式容器-->
+            <div class="ui inverted divided stackable grid"><!--grid 分16份;stackable 移动端可堆叠-->
+                <div class="three wide column"><!--wide 填满 column一列-->
+                    <div class="ui inverted link list">
+                        <div class="item">
+                            <img src="./static/img/wechat.jpg" class="ui rounded images" alt="" style="width: 110px"><!--rounded 圆角-->
+                        </div>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header custom-text-thin custom-text-spaced ">最新博客</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">用户故事</a>
+                        <a href="#" class="item">用户故事</a>
+                        <a href="#" class="item">用户故事</a>
+                        <a href="#" class="item">用户故事</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header custom-text-thin custom-text-spaced ">联系我</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Email:xiognyexingxyx@163.com</a>
+                        <a href="#" class="item">QQ：1425362530</a>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui inverted header custom-text-thin custom-text-spaced ">ChrisFSRM</h4>
+                    <div class="ui inverted link list">
+                        <P class="custom-text-thin custom-text-spaced custom-opacity-mini">这是我的个人博客</P>
+                    </div>
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div><!--divider 分割线-->
+            <p class="custom-text-thin custom-text-spaced custom-opacity-tiny">Copyright ® 2020-2021 ChrisFSRM Designed by AndyXiong</p>
+        </div>
+    </footer>
+    <p style="text-align: center">Copyright ® 2020-2021 ChrisFSRM Designed by AndyXiong</p>
+<script src="http://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script>
+    $('.menu.toggle').click(function () {/*click方法,点击时显示隐藏元素*/
+        $('.menu-item').toggleClass('custom-mobile-hide');/*toggleClass jquery自带样式，点击打开或关闭*/
+    });
+</script>
+</body>
+</html>

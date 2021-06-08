@@ -1,0 +1,131 @@
+/*自定义css*/
+body {
+    background: url("../img/email-pattern.png");
+}
+/*padding*/
+.custom-padding-tiny {
+    padding-top: 0.3em !important;/*提高优先级替换原有css*/
+    padding-bottom: 0.3em !important;
+}
+.custom-padding-tb-mini {
+    padding-top: 0.2em !important;/*提高优先级替换原有css*/
+    padding-bottom: 0.2em !important;
+}
+.custom-padding-td-tiny {
+    padding-top: 0.3em !important;/*提高优先级替换原有css*/
+    padding-bottom: 0.3em !important;
+}
+.custom-padding-td {
+    padding-top: 1em !important;/*提高优先级替换原有css*/
+    padding-bottom: 1em !important;
+}
+.custom-padding-td-large {
+    padding-top: 2em !important;/*提高优先级替换原有css*/
+    padding-bottom: 2em !important;
+}
+.custom-padding-td-big {
+    padding-top: 3em !important;/*提高优先级替换原有css*/
+    padding-bottom: 3em !important;
+}
+.custom-padding-td-huge {
+    padding-top: 4em !important;/*提高优先级替换原有css*/
+    padding-bottom: 4em !important;
+}
+.custom-padding-td-massive {
+    padding-top: 5em !important;/*提高优先级替换原有css*/
+    padding-bottom: 5em !important;
+}
+.custom-padding-lr-responsive{
+    padding-left: 4em !important;
+    padding-right: 4em !important;
+}
+/*margin*/
+.custom-margin-top-small {
+    margin-top: 0.5em;
+}
+.custom-margin-top {
+    margin-top: 1em;
+}
+.custom-margin-large {
+    margin-top: 2em;
+}
+.custom-margin-tb-tiny {
+    margin-top: 0.3em !important;
+    margin-bottom: 0.3em !important;
+}
+.custom-margin-bottom-small {
+    margin-bottom: 0.5em !important;
+}
+
+/*************text*************/
+.custom-text {
+    font-weight: 300 !important;
+    letter-spacing: 1px !important;
+    line-height: 1.8 !important;
+}
+/*粗细*/
+.custom-text-thin {
+    font-weight: 300 !important;
+}
+/*字间距*/
+.custom-text-spaced {
+    letter-spacing: 1px !important;
+}
+/*行间距*/
+.custom-text-lined {
+    line-height: 1.8 !important;
+}
+/*透明度*/
+.custom-opacity-mini {
+    opacity: 0.8 !important;
+}
+.custom-opacity-tiny {
+    opacity: 0.6 !important;
+}
+
+
+/*************disply*************/
+/*行内元素*/
+.custom-inline-block {
+    display: inline-block !important;
+}
+
+/*宽*/
+.custom-cotainer {
+    max-width: 72em !important;
+    margin: auto !important;/*水平自动居中*/
+}
+.custom-cotainer-small {
+    max-width: 60em !important;
+    margin: auto !important;/*水平自动居中*/
+}
+
+.custom-black {
+    color: #333 !important;
+}
+/*绝对定位*/
+.custom-top-right {
+    position: absolute;
+    top: 13px;
+    right: 0;
+}
+/*桌面端隐藏菜单按钮*/
+.custom-mobile-show{
+    display: none !important;
+}
+/*css3@media查询,screen用于电脑手机屏幕响应式页面*/
+@media screen and (max-width: 768px){
+    .custom-mobile-hide {
+        display: none !important;
+    }
+    .custom-mobile-show{
+        display: block !important;
+    }
+    .custom-padding-lr-responsive {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .custom-mobile-wide {
+        width: 100% !important;
+    }
+}
